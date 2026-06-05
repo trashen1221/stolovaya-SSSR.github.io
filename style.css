@@ -1,0 +1,418 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.bg-alt {
+    background-color: #fcf8f2;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+    color: #990000;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2::after {
+    content: ' ★';
+    display: block;
+    font-size: 1rem;
+    color: #d4af37;
+    margin-top: 5px;
+}
+
+/* Шапка */
+header {
+    background-color: #990000;
+    border-bottom: 4px solid #d4af37;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #d4af37;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Баннер СССР */
+.hero {
+    background-color: #800000;
+    background-image: repeating-conic-gradient(from 0deg, #990000 0deg 15deg, #b30000 15deg 30deg);
+    padding: 60px 0;
+    color: #fff;
+    border-bottom: 5px solid #d4af37;
+}
+
+.hero-flex-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text-side {
+    flex: 1.2;
+}
+
+.hero-text-side h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 3px 3px 0px #4d0000;
+}
+
+.hero-text-side p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ffebcc;
+    font-weight: 600;
+}
+
+.hero-image-side {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.chef-main-banner-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+    border: 6px double #d4af37;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+    border-radius: 4px;
+}
+
+/* Блоки описания */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.about-card {
+    flex: 1 1 45%;
+    border: 3px double #990000;
+    padding: 25px;
+    background-color: #fcf8f2;
+}
+
+.about-card h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #990000;
+    margin-bottom: 10px;
+}
+
+.slogan-banner {
+    background-color: #990000;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #d4af37;
+    margin-top: 30px;
+}
+
+.slogan-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #d4af37;
+}
+
+/* Карточки блюд */
+.category-title {
+    font-family: 'Oswald', sans-serif;
+    color: #990000;
+    font-size: 1.5rem;
+    margin: 25px 0 10px 0;
+    border-bottom: 2px dashed #990000;
+}
+
+.menu-item {
+    flex: 1 1 45%;
+    background: #fff;
+    padding: 15px;
+    border-left: 5px solid #990000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.menu-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+    flex-shrink: 0;
+    border: 1px solid #ddd;
+}
+
+.menu-text {
+    flex-grow: 1;
+}
+
+.menu-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+    color: #222;
+}
+
+.menu-text p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.price {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    color: #990000;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #990000;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #990000;
+    border-color: #d4af37;
+}
+
+/* Карты и локации */
+.section-subtitle {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.contacts-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.address-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.address-card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fcf8f2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.address-card h4 {
+    color: #990000;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 5px;
+}
+
+.address-card .time {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.address-card.active {
+    border: 2px solid #990000;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.map-box {
+    flex: 2;
+    height: 350px;
+    border: 2px solid #990000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Форма отзывов */
+.feedback-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feedback-form input, 
+.feedback-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+}
+
+.feedback-form input:focus, 
+.feedback-form textarea:focus {
+    outline: 2px solid #990000;
+}
+
+.success-alert {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e6f4ea;
+    color: #137333;
+    text-align: center;
+    border: 1px solid #137333;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    border-top: 3px solid #d4af37;
+}
+
+/* Адаптивность под телефоны */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        background-color: #990000;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        padding: 15px 0;
+        border-bottom: 3px solid #d4af37;
+    }
+
+    nav.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .hero-flex-layout, .header-flex, .contacts-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text-side h1 {
+        font-size: 2rem;
+    }
+
+    .chef-main-banner-img {
+        max-height: 280px;
+    }
+
+    .map-box {
+        width: 100%;
+        height: 280px;
+    }
+    
+    .about-card, .menu-item {
+        flex: 1 1 100%;
+    }
+}

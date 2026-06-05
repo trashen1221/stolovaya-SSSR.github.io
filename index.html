@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сеть столовых «СССР» — Астрахань</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Подключение Яндекс.Карт для Астрахани -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+    <!-- Шапка и Навигация -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">СТОЛОВАЯ <span>СССР</span></div>
+            
+            <button class="menu-toggle" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="navMenu">
+                <a href="#about">О нас</a>
+                <a href="#menu">Прейскурант</a>
+                <a href="#contacts">Адреса</a>
+                <a href="#order">Заказ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер (Путь исправлен под папку img/) -->
+    <section class="hero">
+        <div class="container hero-flex-layout">
+            <div class="hero-text-side">
+                <h1>ГОРЯЧИЕ ОБЕДЫ — ЗАЛОГ ВЫСОКОЙ ПРОИЗВОДИТЕЛЬНОСТИ ТРУДА!</h1>
+                <p>Наш шеф-повар гарантирует: качество проверено временем, а цены — строго по ГОСТу!</p>
+                <a href="#menu" class="btn">Посмотреть меню</a>
+            </div>
+            
+            <div class="hero-image-side">
+                <img src="img/bg.jpg" alt="Наш шеф-повар на кухне столовой СССР" class="chef-main-banner-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="container section">
+        <h2>ОТ СОВЕТСКОГО ИНФОРМБЮРО</h2>
+        <div class="flex-row">
+            <div class="about-card">
+                <h3>Честные продукты</h3>
+                <p>Никакой химии. Только натуральное мясо, каспийская рыба, свежие овощи и масло по рецептурам 1955 года.</p>
+            </div>
+            <div class="about-card">
+                <h3>Доступно каждому</h3>
+                <p>Сытный комплексный обед доступен любому рабочему, студенту и труженику Астрахани.</p>
+            </div>
+        </div>
+
+        <div class="slogan-banner">
+            <div class="slogan-text">«ЧЕТВЕРГ — РЫБНЫЙ ДЕНЬ!»</div>
+            <p>Товарищ! Помни, что фосфор и омега-3 укрепляют дух и тело строителя нового общества!</p>
+        </div>
+    </section>
+
+    <!-- Прейскурант (Пути исправлены под папку img/) -->
+    <section id="menu" class="bg-alt section">
+        <div class="container">
+            <h2>ПРЕЙСКУРАНТ БЛЮД</h2>
+            
+            <h3 class="category-title">Первые блюда</h3>
+            <div class="flex-row">
+                <div class="menu-item">
+                    <img src="img/borsch.jpg" alt="Борщ" class="menu-img">
+                    <div class="menu-text">
+                        <h3>Борщ «Украинский»</h3>
+                        <p>Наваристый борщ на говяжьем бульоне со сметаной.</p>
+                    </div>
+                    <span class="price">120 ₽</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/uha.jpg" alt="Уха" class="menu-img">
+                    <div class="menu-text">
+                        <h3>Уха по-астрахански</h3>
+                        <p>Из свежего каспийского судака с зеленью.</p>
+                    </div>
+                    <span class="price">150 ₽</span>
+                </div>
+            </div>
+
+            <h3 class="category-title">Вторые блюда</h3>
+            <div class="flex-row">
+                <div class="menu-item">
+                    <img src="img/kotleta.jpg" alt="Котлета" class="menu-img">
+                    <div class="menu-text">
+                        <h3>Котлета с пюре</h3>
+                        <p>Сочная мясная котлета с нежным картофельным пюре.</p>
+                    </div>
+                    <span class="price">180 ₽</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/gulyash.jpg" alt="Гуляш" class="menu-img">
+                    <div class="menu-text">
+                        <h3>Гуляш с гречкой</h3>
+                        <p>Классическое советское блюдо с ароматной подливой.</p>
+                    </div>
+                    <span class="price">195 ₽</span>
+                </div>
+            </div>
+
+            <h3 class="category-title">Закуски и Напитки</h3>
+            <div class="flex-row">
+                <div class="menu-item">
+                    <img src="img/olivie.jpg" alt="Оливье" class="menu-img">
+                    <div class="menu-text">
+                        <h3>Салат «Оливье»</h3>
+                        <p>Тот самый праздничный вкус по строгому рецепту.</p>
+                    </div>
+                    <span class="price">90 ₽</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/kompot.jpg" alt="Компот" class="menu-img">
+                    <div class="menu-text">
+                        <h3>Компот</h3>
+                        <p>Главный освежающий напиток из сухофруктов.</p>
+                    </div>
+                    <span class="price">45 ₽</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и Карта -->
+    <section id="contacts" class="container section">
+        <h2>НАШИ СТОЛОВЫЕ В АСТРАХАНИ</h2>
+        <p class="section-subtitle">Каждая точка оборудована сплит-системами, чтобы победить астраханскую жару!</p>
+        
+        <div class="contacts-flex">
+            <div class="address-list">
+                <div class="address-card active" id="btn-point0">
+                    <h4>Главный филиал (ЦУМ)</h4>
+                    <p>ул. Кирова, д. 5</p>
+                    <p class="time">08:00 – 20:00</p>
+                </div>
+                <div class="address-card" id="btn-point1">
+                    <h4>Филиал «Привокзальный»</h4>
+                    <p>ул. Беринга, д. 2</p>
+                    <p class="time">07:00 – 21:00</p>
+                </div>
+                <div class="address-card" id="btn-point2">
+                    <h4>Филиал «Студенческий»</h4>
+                    <p>ул. Татищева, д. 16 (около АГТУ)</p>
+                    <p class="time">08:00 – 18:00</p>
+                </div>
+            </div>
+            <div id="my-yandex-map" class="map-box"></div>
+        </div>
+    </section>
+
+    <!-- Книга жалоб -->
+    <section id="order" class="bg-alt section">
+        <div class="container">
+            <h2>КНИГА ЖАЛОБ И ПРЕДЛОЖЕНИЙ</h2>
+            <form id="orderForm" class="feedback-form">
+                <input type="text" id="userName" placeholder="Ваше имя / Товарищ" required>
+                <input type="tel" id="userPhone" placeholder="Номер телефона" required>
+                <textarea id="userMessage" rows="4" placeholder="Ваш отзыв или детали заказа банкета" required></textarea>
+                <button type="submit" class="btn">Отправить рапорт</button>
+            </form>
+            <div id="successMessage" class="success-alert hidden"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Сеть столовых «СССР» г. Астрахань. Выполняем пятилетку за три года!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
